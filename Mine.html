@@ -1,0 +1,38 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+class batsman
+{
+char name[25];
+int innings,notout,runs,batavg;
+public:
+   void getdata();
+   void putdata();
+};
+void batsman::getdata()
+{
+cout<<"\n\n\tEnter the details of batsman\n\n";
+cout<<"name: ";
+cin>>name;
+cout<<"Innings: ";
+cin>>innings;
+cout<<"Notout: ";
+cin>>notout;
+cout<<"Runs: ";
+cin>>runs;
+batavg=runs/(innings-notout);
+}
+void batsman::putdata()
+{
+cout<<"\n\tDetails of batsman\n\t**********";
+cout<<"\n\nName: "<<name<<"\nInnings: ";
+cout<<innings<<"\nNotout: "<<notout<<"\nRuns: "<<runs;
+cout<<"\nBatting Average: "<<batavg;
+}
+int main()
+{
+batsman a;
+a.getdata();
+a.putdata();
+return 0;
+}
